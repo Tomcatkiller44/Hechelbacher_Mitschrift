@@ -9,3 +9,21 @@ Weitere Bekannte Auszeichnungssprachen sind:
 - Hypertext Markup Language (HTML)
 - Extensible Markup Language (XML)
 - Yet Another Markup Language (YAML, YML)
+
+## Installation von NodeJS
+
+Javascript läuft unter normalen Umständen in einer Browser-Sandbox. (nur im Browser).
+Seit ca. 2010 gibt es aber eine Laufzeitumgebung (_Runtime Environment_) für JS, damit man auch Serverseitig JS programmieren und ausführen kann. Diese Laufzeitumgebung heißt [NodeJS](https://nodejs.org/en/download).
+
+## Installation von pnpm
+
+Der Standardmäßige _Paketmanager_ für NodeJS ist `npm` (Node Package Manager). Eine etwas modernere und beliebtere Alternative ist `pnpm` (Performant NPM). Die Webseite ist [https://pnpm.io/]
+Die Installation von pnpm erfolgt über npm:
+
+```bash
+npm install -g pnpm@latest-11
+```
+
+## Installation von Python
+
+Python ist eine weit verbreitete Programmiersprache, die für viele Zwecke verwendet wird, von Webentwicklung bis hin zu Datenanalyse und künstlicher Intelligenz. Die offizielle Webseite für Python ist [https://www.python.org/downloads/](https://www.python.org/downloads/).
