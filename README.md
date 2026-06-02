@@ -27,3 +27,5 @@ npm install -g pnpm@latest-11
 ## Installation von Python
 
 Python ist eine weit verbreitete Programmiersprache, die für viele Zwecke verwendet wird, von Webentwicklung bis hin zu Datenanalyse und künstlicher Intelligenz. Die offizielle Webseite für Python ist [https://www.python.org/downloads/](https://www.python.org/downloads/).
+
+Ein Path ist eine Umgebungsvariable, die dem Betriebssystem mitteilt, wo es nach ausführbaren Dateien suchen soll. Wenn du Python installierst, solltest du sicherstellen, dass der Pfad zu Python in deiner PATH-Variable enthalten ist, damit du Python von der Kommandozeile aus ausführen kannst.
