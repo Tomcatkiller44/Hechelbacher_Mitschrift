@@ -39,3 +39,11 @@ npm install -g pnpm@latest-11
 Python ist eine weit verbreitete Programmiersprache, die für viele Zwecke verwendet wird, von Webentwicklung bis hin zu Datenanalyse und künstlicher Intelligenz. Die offizielle Webseite für Python ist [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
 Ein Path ist eine Umgebungsvariable, die dem Betriebssystem mitteilt, wo es nach ausführbaren Dateien suchen soll. Wenn du Python installierst, solltest du sicherstellen, dass der Pfad zu Python in deiner PATH-Variable enthalten ist, damit du Python von der Kommandozeile aus ausführen kannst.
+
+## Installation von Strapi
+
+Installation mit dem Skript `pnpm create strapi`.
+Daraufhin führt das CLI durch die Installation. Falls bei der Installation sogenannter `Build scripts` nicht ausgeführt werden können, schlägt die CLI die Fehlerbehandlung selbstständig vor:
+
+1. Wechsel in das Installationsverzeichnis (z.B. mit `cd my-strapi-project`).
+2. Neuerlicher Versuch der Installation mit `pnpm install` oder `npm install`. Dieser scheitert in der Regel - die Build-Skripte müssen mit `pnpm approve-build` manuell freigegeben werden.
