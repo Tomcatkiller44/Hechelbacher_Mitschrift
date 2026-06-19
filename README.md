@@ -43,7 +43,7 @@ Ein Path ist eine Umgebungsvariable, die dem Betriebssystem mitteilt, wo es nach
 ## Installation von Strapi
 
 Installation mit dem Skript `pnpm create strapi`.
-Daraufhin führt das CLI durch die Installation. Falls bei der Installation sogenannter `Build scripts` nicht ausgeführt werden können, schlägt die CLI die Fehlerbehandlung selbstständig vor:
+Daraufhin führt das CLI(_Command Line Interface_) durch die Installation. Falls bei der Installation sogenannter `Build scripts` nicht ausgeführt werden können, schlägt die CLI die Fehlerbehandlung selbstständig vor:
 
 1. Wechsel in das Installationsverzeichnis (z.B. mit `cd my-strapi-project`).
 2. Neuerlicher Versuch der Installation mit `pnpm install` oder `npm install`. Dieser scheitert in der Regel - die Build-Skripte müssen mit `pnpm approve-build` manuell freigegeben werden.
