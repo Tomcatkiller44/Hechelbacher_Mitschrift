@@ -6,6 +6,73 @@ Das ist die Readme.md Datei. MD steht für Markdown. MD ist eine heutzutage weit
 
 # Allgemeines
 
+Website ist aufgebaut mit HTML, CSS und JavaScript.
+HTML wird als Root gesehen, also als grundlegende Struktur einer Webseite, auf der CSS und JavaScript aufbauen.
+
+DOM (_Document Object Model_) ist eine Programmierschnittstelle für HTML- und XML-Dokumente. Sie stellt die Struktur eines Dokuments als Baum von Objekten dar, sodass Programmiersprachen wie JavaScript auf die Elemente zugreifen und diese manipulieren können.
+
+UI-Komponente
+
+- Daten
+- Template(Vorlage)
+- Logik
+
+**_Unterschied Zuweisung und Mutation_**
+
+- **Zuweisung**: Das Zuweisen eines neuen Wertes zu einer Variablen. Beispiel in JavaScript:
+
+  ```javascript
+  let x = 5; // Zuweisung
+  x = 10; // Neue Zuweisung
+  ```
+
+- **Mutation**: Das Ändern des Inhalts eines bestehenden Objekts oder Arrays, ohne die Referenz zu ändern. Beispiel in JavaScript.
+
+**Komponente und Props**
+
+Jede Komponente besteht aus drei Hauptbestandteilen: Daten, Template und Logik.
+
+- **Daten**: Enthalten den Zustand der Komponente und werden verwendet, um die Darstellung und das Verhalten zu steuern.
+- **Template**: Definiert die Struktur und das Layout der Komponente, oft in HTML oder einer ähnlichen Markup-Sprache.
+- **Logik**: Beinhaltet die Funktionen und Methoden, die das Verhalten der Komponente steuern, einschließlich der Reaktion auf Benutzerinteraktionen und der Manipulation der Daten.
+
+**Props** sind die Eigenschaften oder Attribute einer Komponente, die deren Verhalten und Darstellung beeinflussen.
+
+Beispiel für die Verwendung von Props in einer Komponente:
+//---//
+
+<script>
+  import Child from './Child.svelte';
+</script>
+
+<ul>
+  <child prop="xyz"> </child>
+</ul>
+
+//---//
+
+## ARIA (Accessible Rich Internet Applications)
+
+Aria ist eine Sammlung von Attributen, die verwendet werden, um die Zugänglichkeit von Webinhalten für Menschen mit Behinderungen zu verbessern. Sie steht für _Accessible Rich Internet Applications_ und hilft dabei, dynamische Inhalte und benutzerdefinierte Benutzeroberflächen für Screenreader und andere Hilfstechnologien zugänglich zu machen.
+
+Beispiele für ARIA-Attribute:
+
+- `aria-label`: Gibt eine zugängliche Bezeichnung für ein Element an.
+- `aria-hidden`: Gibt an, ob ein Element für Screenreader verborgen ist.
+- `aria-expanded`: Gibt an, ob ein Element erweitert oder zusammengeklappt ist.
+- `aria-role`: Definiert die Rolle eines Elements, z.B. `button`, `dialog`, `navigation`.
+
+- **Wichtige Runen in JavaScript:**
+
+- $state()
+- $derived()
+- $effect() "Konstruktor für ein "svelte-File" => SFC
+
+  ```javascript
+  let arr = [1, 2, 3];
+  arr.push(4); // Mutation des Arrays
+  ```
+
 Weitere Bekannte Auszeichnungssprachen sind:
 
 - Hypertext Markup Language (HTML)
@@ -19,6 +86,25 @@ let x:number = 3;
 
 int x=3
 double y=5.0;
+
+Push-benachrichtigungen sind Mitteilungen, die von einer Anwendung an den Benutzer gesendet werden, auch wenn die Anwendung gerade nicht aktiv genutzt wird. Sie werden häufig in mobilen Apps und Webanwendungen verwendet, um Benutzer über neue Inhalte, Nachrichten oder Ereignisse zu informieren.
+
+onclick
+(property(JS),attribute(html))
+
+## Zuständigkeiten von HTML und JAVASCRIPT
+
+- **HTML**: Verantwortlich für die Struktur und den Inhalt einer Webseite. HTML definiert Elemente wie Überschriften, Absätze, Listen, Links, Bilder und Formulare.
+- **JavaScript**: Verantwortlich für die Interaktivität und das Verhalten einer Webseite. JavaScript kann HTML-Elemente manipulieren, auf Benutzeraktionen reagieren, Daten verarbeiten und dynamische Inhalte erstellen.
+- **HTML Grundstruktur**:
+  HTML ist das parent von Head und Body, wobei head die meta daten und andere Informationen über das Dokument enthält, während body den eigentlichen Inhalt der Webseite enthält.
+
+---
+
+Unterschied User-Installer vs. System-Installer
+
+- **User-Installer**: Installiert die Software nur für den aktuellen Benutzer. Keine Administratorrechte erforderlich. Die Software wird typischerweise im Benutzerverzeichnis installiert.(Braucht keine Administratorrechte)
+- **System-Installer**: Installiert die Software für alle Benutzer des Systems. Administratorrechte erforderlich. Die Software wird typischerweise in einem systemweiten Verzeichnis installiert.(Braucht Administratorrechte)
 
 ## Installation von NodeJS
 
