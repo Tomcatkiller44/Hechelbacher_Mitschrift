@@ -126,6 +126,8 @@ Python ist eine weit verbreitete Programmiersprache, die für viele Zwecke verwe
 
 Ein Path ist eine Umgebungsvariable, die dem Betriebssystem mitteilt, wo es nach ausführbaren Dateien suchen soll. Wenn du Python installierst, solltest du sicherstellen, dass der Pfad zu Python in deiner PATH-Variable enthalten ist, damit du Python von der Kommandozeile aus ausführen kannst.
 
+---
+
 ## Installation von Strapi
 
 Installation mit dem Skript `pnpm create strapi`.
@@ -133,6 +135,8 @@ Daraufhin führt das CLI(_Command Line Interface_) durch die Installation. Falls
 
 1. Wechsel in das Installationsverzeichnis (z.B. mit `cd my-strapi-project`).
 2. Neuerlicher Versuch der Installation mit `pnpm install` oder `npm install`. Dieser scheitert in der Regel - die Build-Skripte müssen mit `pnpm approve-build` manuell freigegeben werden.
+
+---
 
 ## VibeCoding / AgenticEngineering mit VS Code und GitHub Copilot
 
@@ -142,3 +146,15 @@ Dort können alle Anpassungen des "_Coding Harness_" vorgenommen werden. Wir kö
 # **MCP - Server **
 
 MCP steht für _Model Context Protocoll_. Es ist ein Standard, der von Antrophic entwickelt wurde. Mit Hilfe von MCP können Chatbots/LLMs (_Large Language Models_) mit externen Tools kommunizieren. Diese machen sie zu einem Experten in dem gewissen Bereich, in dem das Tool eingesetzt wird.
+
+# Historische Entwicklung von Webdevelopment
+
+Die Entwicklung des Webs hat mehrere Phasen durchlaufen:
+
+1. **Web 1.0 (statisches Web)**: In den frühen Tagen des Internets bestand das Web hauptsächlich aus statischen HTML-Seiten. Benutzer konnten Inhalte nur lesen, aber nicht interaktiv mit ihnen interagieren. Dominant in den 1990er Jahren.
+
+2. **Web 2.0 (dynamisches Web)**: Mit der Einführung von Technologien wie JavaScript, AJAX und serverseitigen Skriptsprachen wurde das Web interaktiver. Benutzer konnten Inhalte erstellen, teilen und mit anderen interagieren (z.B. soziale Netzwerke, Blogs). Dominant in den 2000er Jahren.
+
+3. **Web 2.5 (Übergang zum semantischen Web - SPA (Single Page Application))**: Diese Phase beschreibt die Übergangszeit zwischen Web 2.0 und Web 3.0, in der erste Ansätze des semantischen Webs und der Dezentralisierung sichtbar wurden.Mit Javascript-Frameworks erstellte "webapps", die ähnlich zu klassischen Desktop-Anwendungen funktionierten. Dominant in den 2010er Jahren.
+
+4. **Web 3.0 (semantisches Web / dezentrales Web)**: Das Web entwickelt sich hin zu einer semantischen und dezentralen Struktur, in der Daten besser vernetzt und maschinenlesbar sind. Technologien wie Blockchain und KI spielen eine wichtige Rolle. Dominant in den 2020er Jahren.
