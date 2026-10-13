@@ -28,6 +28,18 @@ UI-Komponente
 
 - **Mutation**: Das Ändern des Inhalts eines bestehenden Objekts oder Arrays, ohne die Referenz zu ändern. Beispiel in JavaScript.
 
+**Der Begriff Stack**
+
+Ein Stack ist eine lineare Datenstruktur, die auf dem Prinzip "Last In, First Out" (LIFO) basiert. Das bedeutet, dass das letzte Element, das in den Stack eingefügt wird, als erstes wieder entfernt wird.
+Das andere ist die Queue, die auf dem Prinzip "First In, First Out" (FIFO) basiert. Das bedeutet, dass das erste Element, das in die Queue eingefügt wird, als erstes wieder entfernt wird.
+
+Ein **Serverstack** ist eine Sammlung von Technologien, die zusammen verwendet werden, um eine Webanwendung zu erstellen. Ein typischer Web-Stack besteht aus:
+
+- **Frontend**: Die Benutzeroberfläche der Anwendung, die im Browser des Benutzers angezeigt wird. Technologien wie HTML, CSS und JavaScript werden verwendet, um das Frontend zu erstellen.
+- **API (Application Programming Interface)**: Eine Schnittstelle, die es dem Frontend ermöglicht, mit dem Backend zu kommunizieren. APIs definieren, wie Daten zwischen den beiden Teilen der Anwendung ausgetauscht werden.
+- **Backend**: Der Serverteil der Anwendung, der die Geschäftslogik, Datenverarbeitung und Datenbankinteraktionen verwaltet. Programmiersprachen wie Node.js, Python, Ruby oder Java werden häufig für die Backend-Entwicklung verwendet.
+- **Datenbank**: Ein System zur Speicherung und Verwaltung von Daten, das vom Backend verwendet wird. Beliebte Datenbanken sind MySQL, PostgreSQL, MongoDB und SQLite.
+
 **Komponente und Props**
 
 Jede Komponente besteht aus drei Hauptbestandteilen: Daten, Template und Logik.
@@ -153,8 +165,21 @@ Die Entwicklung des Webs hat mehrere Phasen durchlaufen:
 
 1. **Web 1.0 (statisches Web)**: In den frühen Tagen des Internets bestand das Web hauptsächlich aus statischen HTML-Seiten. Benutzer konnten Inhalte nur lesen, aber nicht interaktiv mit ihnen interagieren. Dominant in den 1990er Jahren.
 
-2. **Web 2.0 (dynamisches Web)**: Mit der Einführung von Technologien wie JavaScript, AJAX und serverseitigen Skriptsprachen wurde das Web interaktiver. Benutzer konnten Inhalte erstellen, teilen und mit anderen interagieren (z.B. soziale Netzwerke, Blogs). Dominant in den 2000er Jahren.
+2. **Web 2.0 (dynamisches Web)**: Mit der Einführung von Technologien wie JavaScript, AJAX und serverseitigen Skriptsprachen wurde das Web interaktiver. Benutzer konnten Inhalte erstellen, teilen und mit anderen interagieren (z.B. soziale Netzwerke, Blogs).Nutzen Datenbanken. Dominant in den 2000er Jahren.
 
-3. **Web 2.5 (Übergang zum semantischen Web - SPA (Single Page Application))**: Diese Phase beschreibt die Übergangszeit zwischen Web 2.0 und Web 3.0, in der erste Ansätze des semantischen Webs und der Dezentralisierung sichtbar wurden.Mit Javascript-Frameworks erstellte "webapps", die ähnlich zu klassischen Desktop-Anwendungen funktionierten. Dominant in den 2010er Jahren.
+3. **Web 2.5 (Übergang zum semantischen Web - SPA (Single Page Application))**: Diese Phase beschreibt die Übergangszeit zwischen Web 2.0 und Web 3.0, in der erste Ansätze des semantischen Webs und der Dezentralisierung sichtbar wurden.Mit Javascript-Frameworks erstellte "webapps", die ähnlich zu klassischen Desktop-Anwendungen funktionierten(Push,Kamera,GPS,MIKROFON,Bluetooth,Gyroskop).Um Handyapps möglichst nahe zu kommen, wurden oft progressiv webapps entwickelt, die offline funktionieren und native Funktionen des Geräts nutzen konnten, damit konnten sie push-Benachrichtigungen senden. Um als PWA zu gelten, mussten sie bestimmte Kriterien erfüllen, diese sind:
+4. Musste über Web-App-Manifest(das ist eine JSON-Datei, die Metadaten über die Web-App enthält) verfügen.
+
+5. Musste Service Worker(das ist ein Skript, das im Hintergrund läuft und Funktionen wie Caching und Push-Benachrichtigungen ermöglicht) implementieren.
+
+6. Musste responsive Design(das bedeutet, dass die Web-App auf verschiedenen Bildschirmgrößen und Geräten gut aussieht und funktioniert) haben und außerdem HTTPS haben.
+
+Frontend-Frameworks wenden folgende Architekturprinzipien an, um eine möglichst gute _User Experience_ zu gewährleisten:
+
+- **Komponentenbasierte Architektur**: **Komponenten** sind wiederverwendbare, eigenständige Bausteine, die die Benutzeroberfläche einer Anwendung darstellen. Jede Komponente kapselt ihre eigene Logik, ihr eigenes Template und ihren eigenen Zustand.
+
+- **Deklarative Programmierung**: Anstatt Schritt für Schritt zu beschreiben, wie die Benutzeroberfläche aktualisiert werden soll, beschreibt man, wie sie aussehen soll, und das Framework kümmert sich um die Aktualisierung der Ansicht, wenn sich der Zustand ändert. Dabei kommt **Reaktivität** ins Spiel, das bedeutet, dass Änderungen im Zustand automatisch die Benutzeroberfläche(UI) aktualisieren. Wenn die aktualisierung auch in andere richtungen funktioniert nennt man das bidirektionale Bindung(two-way binding). Logikelemente(schleifen zur darstellung von Listen und Bedingungen für das konditionale Ein- und ausblenden von UI-Elementen)werden in den Templates der Komponenten definiert, wodurch die Trennung von Logik und Darstellung erleichtert wird. Komponenten können **Props** (Eigenschaften) und **Events** (Ereignisse) verwenden, um Daten zwischen ihnen auszutauschen. Props ermöglichen es, Daten von einer übergeordneten Komponente an eine untergeordnete Komponente zu übergeben, während Events es einer untergeordneten Komponente ermöglichen, Informationen an eine übergeordnete Komponente zurückzusenden.
+
+Dominant in den 2010er Jahren.
 
 4. **Web 3.0 (semantisches Web / dezentrales Web)**: Das Web entwickelt sich hin zu einer semantischen und dezentralen Struktur, in der Daten besser vernetzt und maschinenlesbar sind. Technologien wie Blockchain und KI spielen eine wichtige Rolle. Dominant in den 2020er Jahren.
