@@ -1,185 +1,255 @@
-# Hechelbacher_Mitschrift
+# Hechelbacher-Mitschrift
 
-Mitschrift für den Unterricht von Seiwald Markus - Hechelbacher Lucas
+Mitschrift für den Unterricht von Markus Seiwald und Lucas Hechelbacher.
 
-Das ist die Readme.md Datei. MD steht für Markdown. MD ist eine heutzutage weit verbreitete Auszeichnungssprache (_Markup Language_, [Wikipedia](https://de.wikipedia.org/wiki/Auszeichnungssprache))
+Diese Datei ist im Markdown-Format geschrieben. Markdown ist eine weit verbreitete Auszeichnungssprache ([Wikipedia](https://de.wikipedia.org/wiki/Auszeichnungssprache)).
 
-# Allgemeines
+## Inhaltsverzeichnis
 
-Website ist aufgebaut mit HTML, CSS und JavaScript.
-HTML wird als Root gesehen, also als grundlegende Struktur einer Webseite, auf der CSS und JavaScript aufbauen.
+- [Allgemeines](#allgemeines)
+- [Webentwicklung: Grundlagen](#webentwicklung-grundlagen)
+- [Installation und Werkzeuge](#installation-und-werkzeuge)
+- [Vibe Coding und MCP](#vibe-coding-und-mcp)
+- [Historische Entwicklung des Webs](#historische-entwicklung-des-webs)
+- [Frontend-Entwicklung](#frontend-entwicklung)
 
-DOM (_Document Object Model_) ist eine Programmierschnittstelle für HTML- und XML-Dokumente. Sie stellt die Struktur eines Dokuments als Baum von Objekten dar, sodass Programmiersprachen wie JavaScript auf die Elemente zugreifen und diese manipulieren können.
+## Allgemeines
 
-UI-Komponente
+### Webentwicklung: Grundlagen
 
-- Daten
-- Template(Vorlage)
-- Logik
+#### Technologien einer Website
 
-**_Unterschied Zuweisung und Mutation_**
+Eine Website wird typischerweise mit **HTML**, **CSS** und **JavaScript** erstellt:
 
-- **Zuweisung**: Das Zuweisen eines neuen Wertes zu einer Variablen. Beispiel in JavaScript:
+- **HTML** bildet die grundlegende Struktur und den Inhalt einer Webseite.
+- **CSS** gestaltet das Aussehen der Webseite.
+- **JavaScript** ergänzt Interaktivität und Verhalten.
+
+Das **DOM** (_Document Object Model_) ist eine Programmierschnittstelle für HTML- und XML-Dokumente. Es stellt ein Dokument als Baum von Objekten dar. Dadurch können Programmiersprachen wie JavaScript auf die Elemente zugreifen und sie verändern.
+
+### UI-Komponenten
+
+Eine UI-Komponente besteht im Allgemeinen aus drei Teilen:
+
+- **Daten**: Zustand und Werte der Komponente
+- **Template**: Vorlage für Struktur und Darstellung
+- **Logik**: Funktionen und Verhalten der Komponente
+
+### Zuweisung und Mutation
+
+- **Zuweisung** bedeutet, einer Variablen einen neuen Wert zu geben:
 
   ```javascript
-  let x = 5; // Zuweisung
-  x = 10; // Neue Zuweisung
+  let x = 5;
+  x = 10;
   ```
 
-- **Mutation**: Das Ändern des Inhalts eines bestehenden Objekts oder Arrays, ohne die Referenz zu ändern. Beispiel in JavaScript.
+- **Mutation** bedeutet, den Inhalt eines bestehenden Objekts oder Arrays zu ändern, ohne dessen Referenz zu ersetzen:
 
-**Der Begriff Stack**
+  ```javascript
+  let arr = [1, 2, 3];
+  arr.push(4);
+  ```
 
-Ein Stack ist eine lineare Datenstruktur, die auf dem Prinzip "Last In, First Out" (LIFO) basiert. Das bedeutet, dass das letzte Element, das in den Stack eingefügt wird, als erstes wieder entfernt wird.
-Das andere ist die Queue, die auf dem Prinzip "First In, First Out" (FIFO) basiert. Das bedeutet, dass das erste Element, das in die Queue eingefügt wird, als erstes wieder entfernt wird.
+### Stack und Queue
 
-Ein **Serverstack** ist eine Sammlung von Technologien, die zusammen verwendet werden, um eine Webanwendung zu erstellen. Ein typischer Web-Stack besteht aus:
+Ein **Stack** ist eine lineare Datenstruktur nach dem Prinzip **LIFO** (_Last In, First Out_): Das zuletzt hinzugefügte Element wird zuerst wieder entfernt.
 
-- **Frontend**: Die Benutzeroberfläche der Anwendung, die im Browser des Benutzers angezeigt wird. Technologien wie HTML, CSS und JavaScript werden verwendet, um das Frontend zu erstellen.
-- **API (Application Programming Interface)**: Eine Schnittstelle, die es dem Frontend ermöglicht, mit dem Backend zu kommunizieren. APIs definieren, wie Daten zwischen den beiden Teilen der Anwendung ausgetauscht werden.
-- **Backend**: Der Serverteil der Anwendung, der die Geschäftslogik, Datenverarbeitung und Datenbankinteraktionen verwaltet. Programmiersprachen wie Node.js, Python, Ruby oder Java werden häufig für die Backend-Entwicklung verwendet.
-- **Datenbank**: Ein System zur Speicherung und Verwaltung von Daten, das vom Backend verwendet wird. Beliebte Datenbanken sind MySQL, PostgreSQL, MongoDB und SQLite.
+Eine **Queue** funktioniert nach dem Prinzip **FIFO** (_First In, First Out_): Das zuerst hinzugefügte Element wird zuerst wieder entfernt.
 
-**Komponente und Props**
+### Server-Stack
 
-Jede Komponente besteht aus drei Hauptbestandteilen: Daten, Template und Logik.
+Ein **Server-Stack** ist eine Sammlung von Technologien, die gemeinsam für eine Webanwendung eingesetzt werden. Ein typischer Web-Stack besteht aus:
 
-- **Daten**: Enthalten den Zustand der Komponente und werden verwendet, um die Darstellung und das Verhalten zu steuern.
-- **Template**: Definiert die Struktur und das Layout der Komponente, oft in HTML oder einer ähnlichen Markup-Sprache.
-- **Logik**: Beinhaltet die Funktionen und Methoden, die das Verhalten der Komponente steuern, einschließlich der Reaktion auf Benutzerinteraktionen und der Manipulation der Daten.
+- **Frontend**: Benutzeroberfläche, die im Browser angezeigt wird. Typische Technologien sind HTML, CSS und JavaScript.
+- **API** (_Application Programming Interface_): Schnittstelle, über die Frontend und Backend Daten austauschen.
+- **Backend**: Serverseitiger Teil der Anwendung. Er verwaltet Geschäftslogik, Datenverarbeitung und Datenbankzugriffe. Häufig verwendete Technologien sind Node.js, Python, Ruby und Java.
+- **Datenbank**: System zur Speicherung und Verwaltung von Daten. Beispiele sind MySQL, PostgreSQL, MongoDB und SQLite.
 
-**Props** sind die Eigenschaften oder Attribute einer Komponente, die deren Verhalten und Darstellung beeinflussen.
+### Komponenten und Props
 
-Beispiel für die Verwendung von Props in einer Komponente:
-//---//
+Komponenten kapseln ihre Daten, ihr Template und ihre Logik. **Props** sind Eigenschaften, mit denen das Verhalten oder die Darstellung einer Komponente beeinflusst wird.
 
+Beispiel für die Übergabe einer Prop in Svelte:
+
+```svelte
 <script>
   import Child from './Child.svelte';
 </script>
 
 <ul>
-  <child prop="xyz"> </child>
+  <Child prop="xyz" />
 </ul>
+```
 
-//---//
+### ARIA
 
-## ARIA (Accessible Rich Internet Applications)
+**ARIA** steht für _Accessible Rich Internet Applications_. ARIA-Attribute helfen dabei, dynamische Inhalte und benutzerdefinierte Oberflächen für Screenreader und andere Hilfstechnologien zugänglich zu machen.
 
-Aria ist eine Sammlung von Attributen, die verwendet werden, um die Zugänglichkeit von Webinhalten für Menschen mit Behinderungen zu verbessern. Sie steht für _Accessible Rich Internet Applications_ und hilft dabei, dynamische Inhalte und benutzerdefinierte Benutzeroberflächen für Screenreader und andere Hilfstechnologien zugänglich zu machen.
+Beispiele:
 
-Beispiele für ARIA-Attribute:
+- `aria-label`: legt eine zugängliche Bezeichnung für ein Element fest.
+- `aria-hidden`: gibt an, ob ein Element vor Screenreadern verborgen ist.
+- `aria-expanded`: gibt an, ob ein Bereich erweitert oder eingeklappt ist.
+- `role`: beschreibt die Funktion eines Elements, zum Beispiel `button`, `dialog` oder `navigation`.
 
-- `aria-label`: Gibt eine zugängliche Bezeichnung für ein Element an.
-- `aria-hidden`: Gibt an, ob ein Element für Screenreader verborgen ist.
-- `aria-expanded`: Gibt an, ob ein Element erweitert oder zusammengeklappt ist.
-- `aria-role`: Definiert die Rolle eines Elements, z.B. `button`, `dialog`, `navigation`.
+### Svelte-Runes
 
-- **Wichtige Runen in JavaScript:**
+Wichtige Runen in Svelte sind:
 
-- $state()
-- $derived()
-- $effect() "Konstruktor für ein "svelte-File" => SFC
+- `$state()`
+- `$derived()`
+- `$effect()`
 
-  ```javascript
-  let arr = [1, 2, 3];
-  arr.push(4); // Mutation des Arrays
-  ```
+`$effect()` wird verwendet, um reaktive Seiteneffekte auszuführen.
 
-Weitere Bekannte Auszeichnungssprachen sind:
+### Weitere Auszeichnungssprachen
 
-- Hypertext Markup Language (HTML)
-- Extensible Markup Language (XML)
-- Yet Another Markup Language (YAML, YML)
+- **HTML** (_HyperText Markup Language_)
+- **XML** (_Extensible Markup Language_)
+- **YAML** (_YAML Ain't Markup Language_; Dateiendungen `.yaml` oder `.yml`)
 
-var benutzt man nicht mehr
+### Variablen und Datentypen
+
+In modernem JavaScript werden für Variablen üblicherweise `let` und `const` statt `var` verwendet:
+
+```javascript
 let x = 5;
-let y = 10;
-let x:number = 3;
+const y = 10;
+```
 
-int x=3
-double y=5.0;
+TypeScript unterstützt Typangaben:
 
-Push-benachrichtigungen sind Mitteilungen, die von einer Anwendung an den Benutzer gesendet werden, auch wenn die Anwendung gerade nicht aktiv genutzt wird. Sie werden häufig in mobilen Apps und Webanwendungen verwendet, um Benutzer über neue Inhalte, Nachrichten oder Ereignisse zu informieren.
+```typescript
+let x: number = 3;
+```
 
-onclick
-(property(JS),attribute(html))
+Beispiele für numerische Datentypen in Java:
 
-## Zuständigkeiten von HTML und JAVASCRIPT
+```java
+int x = 3;
+double y = 5.0;
+```
 
-- **HTML**: Verantwortlich für die Struktur und den Inhalt einer Webseite. HTML definiert Elemente wie Überschriften, Absätze, Listen, Links, Bilder und Formulare.
-- **JavaScript**: Verantwortlich für die Interaktivität und das Verhalten einer Webseite. JavaScript kann HTML-Elemente manipulieren, auf Benutzeraktionen reagieren, Daten verarbeiten und dynamische Inhalte erstellen.
-- **HTML Grundstruktur**:
-  HTML ist das parent von Head und Body, wobei head die meta daten und andere Informationen über das Dokument enthält, während body den eigentlichen Inhalt der Webseite enthält.
+### Push-Benachrichtigungen
 
----
+Push-Benachrichtigungen sind Mitteilungen, die eine Anwendung an Benutzer sendet, auch wenn diese die Anwendung gerade nicht aktiv verwenden. Sie informieren häufig über neue Inhalte, Nachrichten oder Ereignisse.
 
-Unterschied User-Installer vs. System-Installer
+### `onclick`
 
-- **User-Installer**: Installiert die Software nur für den aktuellen Benutzer. Keine Administratorrechte erforderlich. Die Software wird typischerweise im Benutzerverzeichnis installiert.(Braucht keine Administratorrechte)
-- **System-Installer**: Installiert die Software für alle Benutzer des Systems. Administratorrechte erforderlich. Die Software wird typischerweise in einem systemweiten Verzeichnis installiert.(Braucht Administratorrechte)
+`onclick` ist in JavaScript eine Eigenschaft und in HTML ein Attribut. Es wird verwendet, um eine Aktion beim Anklicken eines Elements auszulösen.
 
-## Installation von NodeJS
+### Zuständigkeiten von HTML und JavaScript
 
-Javascript läuft unter normalen Umständen in einer Browser-Sandbox. (nur im Browser).
-Seit ca. 2010 gibt es aber eine Laufzeitumgebung (_Runtime Environment_) für JS, damit man auch Serverseitig JS programmieren und ausführen kann. Diese Laufzeitumgebung heißt [NodeJS](https://nodejs.org/en/download).
+- **HTML** definiert Struktur und Inhalt einer Webseite, zum Beispiel Überschriften, Absätze, Listen, Links, Bilder und Formulare.
+- **JavaScript** sorgt für Interaktivität. Es kann auf Benutzeraktionen reagieren, Daten verarbeiten und HTML-Elemente verändern.
 
-## Installation von pnpm
+Eine HTML-Datei besteht grundlegend aus `html`, `head` und `body`:
 
-Der Standardmäßige _Paketmanager_ für NodeJS ist `npm` (Node Package Manager). Eine etwas modernere und beliebtere Alternative ist `pnpm` (Performant NPM). Die Webseite ist [https://pnpm.io/]
-Die Installation von pnpm erfolgt über npm:
+- `head` enthält Metadaten und weitere Informationen über das Dokument.
+- `body` enthält den sichtbaren Inhalt der Webseite.
+
+## Installation und Werkzeuge
+
+### User-Installer und System-Installer
+
+- **User-Installer**: Installiert eine Software nur für den aktuellen Benutzer. Normalerweise sind keine Administratorrechte erforderlich; die Installation erfolgt typischerweise im Benutzerverzeichnis.
+- **System-Installer**: Installiert eine Software für alle Benutzer des Systems. Dafür sind Administratorrechte erforderlich; die Installation erfolgt typischerweise in einem systemweiten Verzeichnis.
+
+### Node.js
+
+JavaScript wird normalerweise in einer Browser-Sandbox ausgeführt. Mit **Node.js** gibt es außerdem eine Laufzeitumgebung (_Runtime Environment_), mit der JavaScript auch außerhalb des Browsers, zum Beispiel auf einem Server, ausgeführt werden kann.
+
+Die Installationsdateien gibt es auf der [offiziellen Node.js-Website](https://nodejs.org/en/download).
+
+### pnpm
+
+Der standardmäßige Paketmanager für Node.js ist `npm` (_Node Package Manager_). `pnpm` ist eine alternative Paketverwaltung für JavaScript-Projekte. Weitere Informationen gibt es auf der [pnpm-Website](https://pnpm.io/).
+
+Installation über npm:
 
 ```bash
 npm install -g pnpm@latest-11
 ```
 
-## Installation von Python
+### Python
 
-Python ist eine weit verbreitete Programmiersprache, die für viele Zwecke verwendet wird, von Webentwicklung bis hin zu Datenanalyse und künstlicher Intelligenz. Die offizielle Webseite für Python ist [https://www.python.org/downloads/](https://www.python.org/downloads/).
+Python ist eine vielseitige Programmiersprache, die unter anderem für Webentwicklung und Datenanalyse verwendet wird. Die Installationsdateien gibt es auf der [offiziellen Python-Website](https://www.python.org/downloads/).
 
-Ein Path ist eine Umgebungsvariable, die dem Betriebssystem mitteilt, wo es nach ausführbaren Dateien suchen soll. Wenn du Python installierst, solltest du sicherstellen, dass der Pfad zu Python in deiner PATH-Variable enthalten ist, damit du Python von der Kommandozeile aus ausführen kannst.
+Der **PATH** ist eine Umgebungsvariable, über die das Betriebssystem nach ausführbaren Programmen sucht. Nach der Installation sollte Python im PATH eingetragen sein, damit es über die Kommandozeile gestartet werden kann.
 
----
+### Strapi
 
-## Installation von Strapi
+Ein Strapi-Projekt kann mit folgendem Befehl erstellt werden:
 
-Installation mit dem Skript `pnpm create strapi`.
-Daraufhin führt das CLI(_Command Line Interface_) durch die Installation. Falls bei der Installation sogenannter `Build scripts` nicht ausgeführt werden können, schlägt die CLI die Fehlerbehandlung selbstständig vor:
+```bash
+pnpm create strapi
+```
 
-1. Wechsel in das Installationsverzeichnis (z.B. mit `cd my-strapi-project`).
-2. Neuerlicher Versuch der Installation mit `pnpm install` oder `npm install`. Dieser scheitert in der Regel - die Build-Skripte müssen mit `pnpm approve-build` manuell freigegeben werden.
+Das CLI (_Command Line Interface_) führt anschließend durch die Installation. Falls sogenannte Build-Skripte nicht ausgeführt werden dürfen, schlägt das CLI in der Regel eine Fehlerbehandlung vor:
 
----
+1. In das Installationsverzeichnis wechseln, zum Beispiel mit `cd my-strapi-project`.
+2. Die Installation erneut starten, zum Beispiel mit `pnpm install` oder `npm install`.
+3. Falls erforderlich, die Build-Skripte mit `pnpm approve-build` manuell freigeben.
 
-## VibeCoding / AgenticEngineering mit VS Code und GitHub Copilot
+## Vibe Coding und MCP
 
-VibeCoding passiert in VS Code in erster Linie über die neu eingeführte Agent View.
-Dort können alle Anpassungen des "_Coding Harness_" vorgenommen werden. Wir können unserem Harness verschiedene Methoden zum anpassen geben.
+### Vibe Coding und Agentic Engineering
 
-# **MCP - Server **
+Vibe Coding findet in VS Code vor allem über die **Agent View** statt. Dort lassen sich verschiedene Bestandteile des sogenannten _Coding Harness_ anpassen.
 
-MCP steht für _Model Context Protocoll_. Es ist ein Standard, der von Antrophic entwickelt wurde. Mit Hilfe von MCP können Chatbots/LLMs (_Large Language Models_) mit externen Tools kommunizieren. Diese machen sie zu einem Experten in dem gewissen Bereich, in dem das Tool eingesetzt wird.
+### MCP-Server
 
-# Historische Entwicklung von Webdevelopment
+**MCP** steht für _Model Context Protocol_. Es ist ein Standard, der von Anthropic entwickelt wurde. MCP ermöglicht Chatbots und LLMs (_Large Language Models_), mit externen Werkzeugen zu kommunizieren. Dadurch können sie für bestimmte Aufgaben auf spezialisierte Tools zugreifen.
 
-Die Entwicklung des Webs hat mehrere Phasen durchlaufen:
+## Historische Entwicklung des Webs
 
-1. **Web 1.0 (statisches Web)**: In den frühen Tagen des Internets bestand das Web hauptsächlich aus statischen HTML-Seiten. Benutzer konnten Inhalte nur lesen, aber nicht interaktiv mit ihnen interagieren. Dominant in den 1990er Jahren.
+Die Entwicklung des Webs lässt sich in mehrere Phasen einteilen:
 
-2. **Web 2.0 (dynamisches Web)**: Mit der Einführung von Technologien wie JavaScript, AJAX und serverseitigen Skriptsprachen wurde das Web interaktiver. Benutzer konnten Inhalte erstellen, teilen und mit anderen interagieren (z.B. soziale Netzwerke, Blogs).Nutzen Datenbanken. Dominant in den 2000er Jahren.
+1. **Web 1.0 – statisches Web**  
+   In den frühen Jahren des Internets bestand das Web hauptsächlich aus statischen HTML-Seiten. Benutzer konnten Inhalte vor allem lesen und kaum mit ihnen interagieren. Diese Phase war in den 1990er-Jahren dominant.
 
-3. **Web 2.5 (Übergang zum semantischen Web - SPA (Single Page Application))**: Diese Phase beschreibt die Übergangszeit zwischen Web 2.0 und Web 3.0, in der erste Ansätze des semantischen Webs und der Dezentralisierung sichtbar wurden.Mit Javascript-Frameworks erstellte "webapps", die ähnlich zu klassischen Desktop-Anwendungen funktionierten(Push,Kamera,GPS,MIKROFON,Bluetooth,Gyroskop).Um Handyapps möglichst nahe zu kommen, wurden oft progressiv webapps entwickelt, die offline funktionieren und native Funktionen des Geräts nutzen konnten, damit konnten sie push-Benachrichtigungen senden. Um als PWA zu gelten, mussten sie bestimmte Kriterien erfüllen, diese sind:
-4. Musste über Web-App-Manifest(das ist eine JSON-Datei, die Metadaten über die Web-App enthält) verfügen.
+2. **Web 2.0 – dynamisches Web**  
+   Technologien wie JavaScript, AJAX und serverseitige Skriptsprachen machten das Web interaktiver. Benutzer konnten Inhalte erstellen, teilen und miteinander interagieren, zum Beispiel in sozialen Netzwerken und Blogs. Datenbanken wurden zunehmend genutzt. Diese Phase war in den 2000er-Jahren dominant.
 
-5. Musste Service Worker(das ist ein Skript, das im Hintergrund läuft und Funktionen wie Caching und Push-Benachrichtigungen ermöglicht) implementieren.
+3. **Web 2.5 – Übergang zum semantischen Web und zu SPAs**  
+   Diese Bezeichnung beschreibt den Übergang zwischen Web 2.0 und Web 3.0. JavaScript-Frameworks ermöglichten Webanwendungen, die sich ähnlich wie klassische Desktop-Anwendungen verhielten. Sie konnten Funktionen wie Push-Benachrichtigungen sowie den Zugriff auf Kamera, GPS, Mikrofon, Bluetooth und Gyroskop unterstützen.
 
-6. Musste responsive Design(das bedeutet, dass die Web-App auf verschiedenen Bildschirmgrößen und Geräten gut aussieht und funktioniert) haben und außerdem HTTPS haben.
+   **Progressive Web Apps (PWAs)** sollten die Nutzung auf mobilen Geräten verbessern. Sie können unter anderem offline funktionieren und Gerätefunktionen nutzen. Zu den typischen Voraussetzungen einer PWA gehören:
+   - ein Web-App-Manifest (eine JSON-Datei mit Metadaten zur Web-App),
+   - ein Service Worker (ein Skript für Aufgaben wie Caching und Push-Benachrichtigungen),
+   - responsives Design und HTTPS.
 
-Frontend-Frameworks wenden folgende Architekturprinzipien an, um eine möglichst gute _User Experience_ zu gewährleisten:
+   Frontend-Frameworks nutzen dabei unter anderem folgende Architekturprinzipien:
+   - **Komponentenbasierte Architektur**: Komponenten sind wiederverwendbare, eigenständige Bausteine. Jede Komponente kapselt ihre eigene Logik, ihr Template und ihren Zustand.
+   - **Deklarative Programmierung**: Es wird beschrieben, wie die Benutzeroberfläche aussehen soll. Das Framework aktualisiert sie, wenn sich der Zustand ändert.
+   - **Reaktivität**: Änderungen am Zustand aktualisieren automatisch die Benutzeroberfläche.
+   - **Datenbindung**: Bei bidirektionaler Bindung (_two-way binding_) können Änderungen in beide Richtungen übertragen werden.
+   - **Props und Events**: Props übergeben Daten von einer übergeordneten an eine untergeordnete Komponente. Events ermöglichen es einer untergeordneten Komponente, Informationen an die übergeordnete Komponente zurückzugeben.
+   - **Logik im Template**: Schleifen zur Darstellung von Listen und Bedingungen zum Ein- oder Ausblenden von Elementen werden im Template definiert.
 
-- **Komponentenbasierte Architektur**: **Komponenten** sind wiederverwendbare, eigenständige Bausteine, die die Benutzeroberfläche einer Anwendung darstellen. Jede Komponente kapselt ihre eigene Logik, ihr eigenes Template und ihren eigenen Zustand.
+   Frontend-Frameworks und Webanwendungen waren in den 2010er-Jahren besonders dominant.
 
-- **Deklarative Programmierung**: Anstatt Schritt für Schritt zu beschreiben, wie die Benutzeroberfläche aktualisiert werden soll, beschreibt man, wie sie aussehen soll, und das Framework kümmert sich um die Aktualisierung der Ansicht, wenn sich der Zustand ändert. Dabei kommt **Reaktivität** ins Spiel, das bedeutet, dass Änderungen im Zustand automatisch die Benutzeroberfläche(UI) aktualisieren. Wenn die aktualisierung auch in andere richtungen funktioniert nennt man das bidirektionale Bindung(two-way binding). Logikelemente(schleifen zur darstellung von Listen und Bedingungen für das konditionale Ein- und ausblenden von UI-Elementen)werden in den Templates der Komponenten definiert, wodurch die Trennung von Logik und Darstellung erleichtert wird. Komponenten können **Props** (Eigenschaften) und **Events** (Ereignisse) verwenden, um Daten zwischen ihnen auszutauschen. Props ermöglichen es, Daten von einer übergeordneten Komponente an eine untergeordnete Komponente zu übergeben, während Events es einer untergeordneten Komponente ermöglichen, Informationen an eine übergeordnete Komponente zurückzusenden.
+4. **Web 3.0 – semantisches und dezentrales Web**  
+   Das Web entwickelt sich weiter in Richtung einer semantischen und dezentralen Struktur, in der Daten besser vernetzt und maschinenlesbar sind. Technologien wie Blockchain und künstliche Intelligenz spielen dabei eine Rolle. Diese Phase wird häufig mit den 2020er-Jahren verbunden.
 
-Dominant in den 2010er Jahren.
+## Frontend-Entwicklung
 
-4. **Web 3.0 (semantisches Web / dezentrales Web)**: Das Web entwickelt sich hin zu einer semantischen und dezentralen Struktur, in der Daten besser vernetzt und maschinenlesbar sind. Technologien wie Blockchain und KI spielen eine wichtige Rolle. Dominant in den 2020er Jahren.
+### Ordnerstruktur
+
+Die Ordnerstruktur einer Frontend-Anwendung hängt vom Framework und vom Projekt ab. Die folgenden Abbildungen zeigen Beispiele für eine Svelte-Anwendung:
+
+![Ordnerstruktur einer Svelte-Anwendung](Bild.png)
+
+- `.vscode` enthält Einstellungen für den VS-Code-Editor.
+- `node_modules` enthält die Abhängigkeiten (_Dependencies_) des Projekts. Diese werden zur Entwicklung (_Build Time_) und/oder zur Ausführung (_Run Time_) benötigt.
+- `package.json` listet die Abhängigkeiten auf und enthält Metadaten zum Projekt, zum Beispiel Name, Version, Autor und Lizenz. Außerdem können dort Skripte für Aufgaben wie das Starten des Entwicklungsservers oder das Erstellen einer Produktionsversion definiert werden.
+- `public` enthält statische Dateien wie Bilder, Schriftarten und das HTML-Template. Diese Dateien können vom Browser direkt über ihren jeweiligen Pfad geladen werden.
+
+![Unterstruktur des `src`-Ordners](Bild1-1.png)
+
+Der Ordner `src` enthält den Quellcode der Anwendung. Die Dateien `app.css`, `app.svelte` und `main.ts` sind die Einstiegspunkte der Anwendung (in diesem Fall eine SPA). Sie werden vom Browser als erstes geladen, wenn die entsprechende Website aufgerufen wird. Die Datei `app.css` enthält die globalen Styles, die Datei `app.svelte` das Haupt-Template und die Datei `main.ts` den Einstiegspunkt für die Anwendung. Die Unterordner `components`, `routes` und `stores` enthalten die Komponenten, Routen und Stores der Anwendung. Die Datei `main.ts` importiert die Datei `app.svelte` und erstellt eine neue Instanz der Anwendung. Die Datei `app.svelte` importiert die Datei `app.css` und rendert die Anwendung.
+
+Der Ordner `lib` enthält externe benutzerdefinierte UI-Komponenten, die von der Anwendung verwendet werden. Diese Bibliotheken können entweder als Node.js-Module installiert oder manuell in den Ordner kopiert werden. Die Datei `index.ts` exportiert die wichtigsten Funktionen und Klassen der Bibliothek, damit sie von anderen Teilen der Anwendung importiert werden können.
+Der Ordner `components` enthält die wiederverwendbaren UI-Komponenten der Anwendung. Jede Komponente besteht aus einer Svelte-Datei, die das Template, die Logik und die Styles der Komponente enthält. Die Komponenten können Props und Events verwenden, um Daten zwischen ihnen auszutauschen.
+Die Datei `store.svelte.ts` enthält den Zustand (State) der Anwendung. Das heißt es speichert alle Daten, die sich im Laufe der Nutzung der Anwendung ändern können(z.B. Spielstand, Spielerergebnisse, Einstellungen usw.) und fungieren als zentrale Datenquelle für die Komponenten (Single Source of Truth). Die Komponenten können den Zustand abonnieren und darauf reagieren, wenn sich die Daten ändern. Der Zustand kann auch Methoden enthalten, um die Daten zu aktualisieren oder zu manipulieren (Für mehr Details zum Speichermanagement im Frontend siehe Road-To-IT-Matura Team im Kanal "SWP-06-Softwarearchitektur").
